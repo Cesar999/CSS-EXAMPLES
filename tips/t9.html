@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input[type=text]{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0px 20px 0px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+        input[type=checkbox], input[type=radio]{
+            margin: 10px 0px 20px 0px;
+        }
+        select{
+            margin: 10px 0px;
+        }
+        div{
+            width: 500px;
+            background-color: rgb(122, 121, 121);
+            border: 4px solid black;
+            border-radius: 5px;
+            padding: 15px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        input[type=submit]{
+            background-color: rgb(16, 128, 16);
+            border-radius: 5px;
+            width:100%;
+            border: 2px solid white;
+            padding: 10px;
+            margin: 10px 0px 5px 0px;
+        }
+        input[type=submit]:hover{
+            background-color: rgb(68, 241, 68);
+        }
+    </style>
+    <title>Forms</title>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="fname">Firstname</label>
+            <input type="text" id="fname" name="firstname">
+            <br>
+            <label for="lname">Lastname</label>
+            <input type="text" id="lname" name="lastname"> 
+            <br>
+            <label>Vehicle</label>
+            <br>
+            <input type="checkbox" name="vehicle1" value="Bike" id="v1">
+            <label for="v1">Bike</label>
+            &nbsp;
+            <input type="checkbox" name="vehicle2" value="Car" id="v2">
+            <label for="v2">Car</label>
+            &nbsp;
+            <input type="checkbox" name="vehicle3" value="Boat" id="v3">
+            <label for="v3">Boat</label>
+            &nbsp;
+            <br>
+
+            <input type="radio" id="male" name="gender"/>
+            <label for="male">Male</label>
+            &nbsp;
+            <input type="radio" id="female" name="gender"/>
+            <label for="female">Female</label>
+            &nbsp;
+            <br>
+            <label for="country">Country</label>
+            <br>
+            <select id="country" name="country">
+                <option value="United States of America">USA</option>
+                <option value="Mexico">MXN</option>
+                <option value="Canada">CAN</option>
+            </select>   
+            <br>
+            <input type="submit" value="Submit">        
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                width: 400px;
+                height: 200px;
+                border: 5px solid goldenrod;
+            }
+            .one{
+                display: none;
+                background-color: red;
+            }
+            .two{
+                visibility: hidden;
+                background-color: green;
+            }
+            .three{
+                opacity: 0;
+                background-color: blue;
+            }
+            #outer{
+                border: 5px solid black;
+            }
+        </style>
+        <title>Display Visibility</title>
+    </head>
+    <body>
+        <div id="outer">
+            <div class='one'></div>
+            <div class='two'></div>
+            <div class='three'></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var hidden = document.getElementsByClassName("two")[0];
+        hidden.addEventListener("click", hello2);
+        function hello2(){
+            alert("Hello Hidden");
+        }
+
+        var outer = document.getElementById("outer");
+        outer.addEventListener("click", hello);
+        function hello(){
+            alert("Hello");
+        }
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #heart { 
+            position: relative;
+            background-color: transparent;
+            border: 0px
+        }
+        #heart:before, #heart:after {
+            position: absolute;
+            content: "";
+            left: 105px; top: 0;
+            width: 105px;
+            height: 162px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        #heart:after { 
+            left: 0; 
+            transform: rotate(45deg);
+            transform-origin :100% 100%;
+        }
+        </style>
+    </head>
+    <body>
+        <button id="heart"></button>
+    </body>
+
+</html>

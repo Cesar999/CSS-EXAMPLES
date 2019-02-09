@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                background: transparent;
+                margin-left: 10px;
+            }
+            .triangle_up{
+                width: 0; 
+                height: 0; 
+                border-left: 60px solid transparent;
+                border-right: 60px solid transparent;
+                border-bottom: 100px solid yellow;
+                border-top: 0px;
+            }
+            .triangle_right{
+                width: 0; 
+                height: 0; 
+                border-top: 60px solid transparent;
+                border-bottom: 60px solid transparent;
+                border-left: 100px solid green;
+                border-right: 0px;
+            }
+            .triangle_right:hover{
+                border-left: 100px solid orange;
+            }
+            .triangle_up:hover{
+                border-bottom: 100px solid red;
+            }
+            button:focus {
+                outline:0;
+            }
+            .triangle_up:active{
+                border-bottom: 100px solid purple;
+            }
+            .triangle_right:active{
+                border-left: 100px solid blue;
+            }
+            .click{
+                margin-left: -82px;
+                margin-top: -18px;
+                color: white;
+                border: 2px solid white;
+                border-radius: 20px;
+                width: 25px;
+                height: 25px;
+                padding: 10px 6px 0px 4px;
+            }
+            .freak{
+                background-color: rgb(80, 151, 80);
+                color: white;
+                border-radius: 30px 5px 30px 5px;
+                border: 2px solid rgb(53, 52, 52);
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="triangle_up"></button>
+        <hr>
+        <button class="triangle_right"><div class="click">Click</div></button>
+        <hr>
+        <button class="freak">Click</button>
+        <hr>
+    </body>
+    <script>
+        const up = document.querySelector('.triangle_up');
+        up.addEventListener('click',(e)=>{
+            alert('Hello from Up Triangle');
+        });
+
+        const right = document.querySelector('.triangle_right');
+        right.addEventListener('click',(e)=>{
+            alert('Hello from Right Triangle');
+        });
+    </script>
+</html>

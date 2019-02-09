@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        h3{
+            color: blue!important;
+        }
+    </style>
+    <head>
+        <title>Shadow DOM</title>
+    </head>
+    <body>
+        <h3>Welcome to my website</h3>
+        <div id="shadowHost">
+            <span id="child">This is not part of the shadow DOM</span>
+        </div>
+        <template id="news-widget">
+            <style>
+                h3{
+                    color: green;
+                }
+            </style>
+            <h3>News widget</h3>
+        </template>
+    </body>
+    <script type="text/javascript">
+        var shadowHost = document.getElementById("shadowHost");
+        var shadowRoot = shadowHost.createShadowRoot();
+        var shadowChild = document.createElement("span");
+
+        shadowChild.innerHTML = document.getElementById("news-widget").innerHTML;
+        shadowRoot.appendChild(shadowChild);
+    </script>
+</html>
