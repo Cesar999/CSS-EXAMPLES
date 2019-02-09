@@ -1,5 +1,7 @@
 .btn{
-    &:link, &:visited{
+    border: 0px solid transparent;
+
+    &,&:link, &:visited{
         text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
@@ -16,7 +18,8 @@
         box-shadow: 0 10px 20px rgba($color-black,0.25);
     }
     
-    &:active{
+    &:active, &:focus{
+        outline: none;
         transform: translate(-1px);
         box-shadow: 0 5px 10px rgba($color-black,0);
     }
@@ -26,6 +29,14 @@
         color: $color-gray-text;
         &::after{
             background-color: $color-white;
+        }
+    }
+
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+        &::after{
+            background-color: $color-primary;
         }
     }
     
