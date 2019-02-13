@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container{
+                background-color: #ccc;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+
+            .item{
+                background-color: #f1425d;
+                padding: 40px;
+                margin: 30px;
+                color: #fff;
+                font-size: 40px;
+                flex-grow: 1;
+                text-align: center;
+            }
+
+            .div2{
+                height: 200px;
+                flex-basis: 400px;
+                flex-shrink: 0;
+            }
+
+            
+            .div4{
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div container">
+            <div class="div item">1</div>
+            <div class="div2 item">2</div>
+            <div class="div item">3</div>
+            <div class="div4 item">4</div>
+            <div class="div item">5</div>
+        </div>
+    </body>
+</html>
+
+<!-- <style>
+    .container{
+        display: flex;
+        flex-direction: row|row-reverse|column|column-reverse;
+        flex-wrap: nowrap|wrap|wrap-reverse;
+        justify-content: flex-start|flex-end|center|space-between|space-around|space-evenly;
+        align-items: stretch|flex-start|flex-end|center|baseline;
+        align-content: stretch|flex-start|flex-end|center|space-between|space-around
+    }
+
+    .item{
+        align-self: auto|stretch|flex-start|flex-end|center|baseline;
+        order: 0|<integer>;
+        flex-grow: 0|<integer>;
+        flex-shrink: 1|<integer>;
+        flex-basis: auto|<integer>;
+    }
+</style> -->
