@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .grid_lay{
+            width: 98vw;
+            height: 95vh;
+            display: grid;
+            grid-template-rows: 1fr repeat(3, 3fr) 1fr;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 3% 1.5%; 
+            text-align: center;
+            grid-template-areas: 
+                "head head  head  head  head  head"
+                "col  col   char1 char1 char2 char2"
+                "col  col   art   art   art   art"
+                "col  col   form  form  form  litt"
+                "foot foot  foot  foot  foot  foot";
+        }
+
+        .grid_lay > div{
+            border: 4px solid black;
+        }
+
+        .header{
+            grid-area: head;
+        }
+        .column{
+            grid-area: col;
+        }
+        .chart1{
+            grid-area: char1;
+        }
+        .chart2{
+            grid-area: char2;
+        }
+        .article{
+            grid-area: art;
+        }
+        .form{
+            grid-area: form;
+        }
+        .little{
+            grid-area: litt;
+        }
+        .footer{
+            grid-area: foot;
+        }
+
+        h1{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="grid_lay">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        
+        <div class="column">
+            <h1>Column</h1>
+        </div>
+
+        <div class="chart1">
+            <h1>Chart1</h1>
+        </div>
+
+        <div class="chart2">
+            <h1>Chart2</h1>
+        </div>
+
+        <div class="article">
+            <h1>Article</h1>
+        </div>
+
+        <div class="form">
+            <h1>Form</h1>
+        </div>
+
+        <div class="little">
+            <h1>Little</h1>
+        </div>
+
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+   </div> 
+</body>
+</html>
